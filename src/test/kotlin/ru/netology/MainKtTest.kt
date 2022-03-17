@@ -10,7 +10,7 @@ class MainKtTest {
     fun transferFeeForVkIsZeroWithDefaultParams() {
         //arrange
         val amount = 200 * 100
-        val expectedFee = 1
+        val expectedFee = 0
         //act
         val actualFee = transferFee(amount = amount)
         //assert
@@ -125,7 +125,7 @@ class MainKtTest {
         val amount = 10000 * 100
         val monthSum = maxMonthTransferCard - 5000 * 100
         val daySum = 5000 * 100
-        val expectedOut = "Сумма перевода по карте превышает лимит в меся"
+        val expectedOut = "Сумма перевода по карте превышает лимит в месяц"
         //act
         val actualOut = outTransferFee(type, monthSum, daySum, amount)
         //assert
